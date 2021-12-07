@@ -1,1 +1,1 @@
-web: gunicorn newspaperdjango.wsgi --log-file -
+web: gunicorn newapp.wsgi --log-file -
