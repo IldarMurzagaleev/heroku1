@@ -1,0 +1,42 @@
+<!-- templates/base.html -->
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-Ǘ">
+<meta name="viewport" content="width=device-width,
+initial-scale=ǐ, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+integrity="shaǒǗǓ-MCwǘǗ/SFnGEǗfJTǒGXwEOngsVǖZtǑǖNXFoaoApmYmǗǐi\ uXoPkFOJwJǗERdknLPMO"
+crossorigin="anonymous">
+<title>{% block title %}Newspaper App{% endblock title %}</title>
+</head>
+{#<header>#}
+{#    <a href="{% url 'home' %}">Home</a>#}
+{#</header>#}
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+<a class="navbar-brand" href="{% url 'home' %}">Newspaper</a>
+Chapter 10: Bootstrap 208
+<button class="navbar-toggler" type="button" data-toggle="collapse"
+data-target="#navbarCollapse" aria-controls="navbarCollapse"
+aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+</div>
+</nav>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+{#<a class="navbar-brand" href="{% url 'home' %}">Newspaper</a>#}
+{% if user.is_authenticated %}
+<ul class="navbar-nav mr-auto">
+<li class="nav-item"><a href="{% url 'article_new' %}">+ New</a></li>
+</ul>
+{% endif %}
+</nav>
+<div class="container">
+{% block content %}
+{% endblock content %}
+</div>
+</body>
+</html>
